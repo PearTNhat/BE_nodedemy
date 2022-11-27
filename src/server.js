@@ -6,7 +6,9 @@ const router = require('./routes/apiRoutes');
 const port = 3535;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/congkhai', express.static(path.join(__dirname, 'public')));
+//duong dan -> thu muc cong khai
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
