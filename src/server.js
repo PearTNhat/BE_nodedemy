@@ -3,7 +3,7 @@ const { dirname } = require('path');
 const app = express();
 const path = require('path');
 const router = require('./routes/apiRoutes');
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //duong dan -> thu muc cong khai
